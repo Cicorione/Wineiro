@@ -4,7 +4,8 @@
  <title>Bootstrap Example</title>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
  <style>
@@ -22,6 +23,13 @@
       text-shadow: 2px 2px 4px #000;
       height: 50vh;
     }
+
+    .wine-label-main {
+      height: 50vh;
+      background: url("images/tupun02.jpg") center center no-repeat;
+      width: 100%;
+    }
+
 
   /* Align vertically a column */
     .v-align {
@@ -47,9 +55,10 @@
 
     /* padding margin ovveride */
 
-    .col-sm-6 .col-md-3 {
+    .border-box {
       margin: 0px;
       padding: 0px;
+      border: none;
     }
 
 
@@ -60,27 +69,31 @@
     	float: left;
     	position: relative;
     	width: 100%;
-    	height: 100%;
+    	height: auto;
     	text-align: center;
-    	vertical-align: middle;
-    	overflow: hidden;
+      vertical-align: center;
+   	  overflow: hidden;
     	background-color: #000;
     	color: #FFF;
-      margin: 0px;
+      margin: auto;
       padding:0px;
     }
 
 
     .hvr-zoom h1 {
+      display: inline-block;
     	opacity: 0;
-    	font-size: 10em;
+    	font-size: 8em;
     	position: absolute;
     	text-align: center;
     	top: 25%;
       left: 25%;
+      right: 25%;
+      bottom: 25%;
     	-webkit-transition: opacity 0.35s ease-in, -webkit-transform 0.35s ease-in;
     	transition: opacity 0.35s ease-in, transform 0.35s ease-in;
     }
+
 
     .hvr-zoom:hover h1 {
     	opacity: 0.8;
@@ -163,30 +176,73 @@
       </div>
     </div>
   </nav>
+  <section id="aboutme">
+    <div class="container">
+      <div class="row text-center">
+        <h1>Who We Are</h1>
+          <p>Our vision at CRAVEIRO is to be a top beverage industry player, known as a winning company that shapes our industry. In doing so, we will grow our revenue and profits, thereby enhancing the value of CRAVEIRO to our shareholders.
+          <br /><br />
+          CRAVEIRO was founded on three cornerstones: quality of product, quality of people, and quality of relationships.  It is therefore logical that our portfolio today continues to reflect the unerring principle of excellence.  This principle continues to guide every step of our growth, from the choice of new representations, to the range of services demanded by an increasingly sophisticated and competitive market, to the informed personnel who provide them.
+          <br /><br />
+          Our business strategy is focused on growing our global brands in the North American market through great knowledge of the European and North and South - American markets, creating new growth opportunities by supporting the right innovations and investments, and building a global, fact-based, high-performing culture, thereby enhancing the value of the brands we represent.
+          <br /><br />
+          We invite you to explore CRAVEIRO's Web site for you to get to know our line of fine spirits and fine wines appreciated world wide. CRAVEIRO is the United States Importer of Isabela, Argentina; Bela, Chile and the Colorado importer for Bodega del Tupun, Argentina; Vina Sutil, Chile; Vina Polkura, Chile; Sur de los Andes, Argentina and Tenuta Casteani, Italy. CRAVEIRO also provides marketing services for Itaipava Pilsen, Brazil in Colorado.</p>
+          <br /><br />
+          <h1>Mission Statement</h1>
+          <p>CRAVEIRO is dedicated to building brands by providing innovative products, originality, constant quality, exceptional value and unsurpassed customer service, all with great distinction.</p><br /><br />
+      </div>
+    </div>
+  </section>
   <main id="main-content">
     <div class="container-fluid text-center">
       <div class="row">
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
           <div class="hvr-zoom">
               <img src="images/tupun01.jpg" alt="Nome">
               <h1 class="glyphicon glyphicon-play-circle"></h1>
           </div>
     		</div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
           <div class="hvr-zoom">
               <img src="images/tupun02.jpg" alt="Nome">
               <h1 class="glyphicon glyphicon-play-circle"></h1>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
           <div class="hvr-zoom">
               <img src="images/tupun03.jpg" alt="Nome">
               <h1 class="glyphicon glyphicon-play-circle"></h1>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="hvr-zoom">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom" style="margin: 0px;">
               <img src="images/tupun04.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun05.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+    		</div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun06.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun07.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom" style="margin: 0px;">
+              <img src="images/tupun08.jpg" alt="Nome">
               <h1 class="glyphicon glyphicon-play-circle"></h1>
           </div>
         </div>
