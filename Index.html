@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Bootstrap Example</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Jumbotron ovveride */
+    .jumbotron {
+      background: url("images/wine_cellar.jpg") center center no-repeat;
+      background-size: cover;
+      color: #FFF;
+      text-shadow: 2px 2px 4px #000;
+      height: 50vh;
+    }
+
+    .wine-label-main {
+      height: 50vh;
+      background: url("images/tupun02.jpg") center center no-repeat;
+      width: 100%;
+    }
+
+
+  /* Align vertically a column */
+    .v-align {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    .jumbo-center {
+    	position: absolute;
+      top: 15%;
+      left: 5%;
+      right: 5%;
+      text-align: center;
+      margin: auto;
+     }
+
+    /* Footer override */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    /* padding margin ovveride */
+
+    .col-sm-6 .col-md-3 {
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+
+    /* over effect */
+
+    .hvr-zoom {
+    	float: left;
+    	position: relative;
+    	width: 100%;
+    	height: 100%;
+    	text-align: center;
+    	vertical-align: middle;
+    	overflow: hidden;
+    	background-color: #000;
+    	color: #FFF;
+      margin: 0px;
+      padding:0px;
+    }
+
+
+    .hvr-zoom h1 {
+    	opacity: 0;
+    	font-size: 10em;
+    	position: absolute;
+    	text-align: center;
+    	top: 25%;
+      left: 25%;
+    	-webkit-transition: opacity 0.35s ease-in, -webkit-transform 0.35s ease-in;
+    	transition: opacity 0.35s ease-in, transform 0.35s ease-in;
+    }
+
+
+    .hvr-zoom:hover h1 {
+    	opacity: 0.8;
+    }
+
+    .hvr-zoom img {
+      display: block;
+      position: relative;
+      max-width: none;
+      width: 100%;
+    	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    	transition: opacity 0.35s, transform 0.35s;
+    	-webkit-transition: all 1s ease; /* Safari and Chrome */
+        -moz-transition: all 1s ease; /* Firefox */
+        -o-transition: all 1s ease; /* IE 9 */
+        -ms-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+            max-width: 100%;
+    }
+
+    .hvr-zoom:hover img {
+    	opacity: 0.8;
+        -webkit-transform:scale(1.25); /* Safari and Chrome */
+        -moz-transform:scale(1.25); /* Firefox */
+        -ms-transform:scale(1.25); /* IE 9 */
+        -o-transform:scale(1.25); /* Opera */
+         transform:scale(1.25);
+    }
+
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px)  {
+      .wine-label-main {
+        height: 50vh;
+        background: url("images/tupun02.jpg") center center no-repeat;
+        width: 50%;
+      }
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px)  {
+      .wine-label-main {
+        height: 50vh;
+        background: url("images/tupun02.jpg") center center no-repeat;
+        width: 25%;
+      }
+     }
+  </style>
+</head>
+<body>
+  <section id="showcase">
+    <div class="jumbotron">
+      <div class="container text-center">
+        <div class="jumbo-center">
+        <h1>My First Bootstrap Page</h1>
+        <p>This is some text.</p>
+        <p>Mannaggia a Zio Carlo!!!</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <nav id="navigation" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">WebSite Name</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Start</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Brands</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main-content">
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="hvr-zoom">
+              <img src="images/tupun01.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+    		</div>
+        <div class="col-sm-6 col-md-3">
+          <div class="hvr-zoom">
+              <img src="images/tupun02.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="hvr-zoom">
+              <img src="images/tupun03.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="hvr-zoom">
+              <img src="images/tupun04.jpg" alt="Nome">
+              <h1 class="glyphicon glyphicon-play-circle"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section id="awards">
+    <center>
+    <div id="awardsCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="awardsCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="awardsCarousel" data-slide-to="1"></li>
+        <li data-target="awardsCarousel" data-slide-to="2"></li>
+        <li data-target="awardsCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- Wrappers for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h2>Polkura Syrah 01</h2>
+          <p>2012 – James Suckling 95<br />
+          2012 – Descorchados 94<br />
+          2011 – Wine Spectator 91 (Top 100)<br />
+          2011 – James Suckling 93<br />
+          2010 – Descorchados 93<br /></p>
+        </div>
+        <div class="item">
+          <h2>Polkura Syrah 02</h2>
+          <p>2012 – James Suckling 95<br />
+          2012 – Descorchados 94<br />
+          2011 – Wine Spectator 91 (Top 100)<br />
+          2011 – James Suckling 93<br />
+          2010 – Descorchados 93<br /></p>
+        </div>
+        <div class="item">
+          <h2>Polkura Syrah 03</h2>
+          <p>2012 – James Suckling 95<br />
+          2012 – Descorchados 94<br />
+          2011 – Wine Spectator 91 (Top 100)<br />
+          2011 – James Suckling 93<br />
+          2010 – Descorchados 93<br /></p>
+        </div>
+        <div class="item">
+          <h2>Polkura Syrah 04</h2>
+          <p>2012 – James Suckling 95<br />
+          2012 – Descorchados 94<br />
+          2011 – Wine Spectator 91 (Top 100)<br />
+          2011 – James Suckling 93<br />
+          2010 – Descorchados 93<br /></p>
+        </div>
+      </div>
+    </div>
+    </center>
+  </section>
+
+</body>
+</html>
