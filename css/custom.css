@@ -1,0 +1,171 @@
+/* Custom CSS for Wineiro project */
+.affix {
+      top: 0;
+      width: 100%;
+  }
+
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color:rgba(227, 219, 219, 0.5);
+}
+
+
+/* Jumbotron ovveride */
+
+.jumbotron {
+    background: url("../images/wine_cellar.jpg") center center no-repeat;
+    background-size: cover;
+    color: #FFF;
+    text-shadow: 2px 2px 4px #000;
+    height: 100vh;
+}
+.wine-label-main {
+    height: 50vh;
+    background: url("images/tupun02.jpg") center center no-repeat;
+    width: 100%;
+}
+
+/* aboutme */
+
+.aboutme {
+  color: #444;
+  font-size: 16px;
+}
+
+span.aboutme {
+  font-size: 60px;
+}
+
+button.aboutbtn {
+  margin: 50px;
+}
+
+.padtop {
+  padding-top: 100px;
+}
+
+.padbot {
+  padding-bottom: 100px;
+}
+
+
+
+/* Align vertically a column */
+
+.v-align {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.jumbo-center {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Footer override */
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+/* padding margin ovveride */
+
+.border-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+/* over effect */
+
+.hvr-zoom {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: #000;
+    color: #FFF;
+    margin: auto;
+    padding: 0px;
+}
+.hvr-zoom span {
+    display: inline-block;
+    opacity: 0;
+    font-size: 8em;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    top: 40%;
+    left: 40%;
+    right: 40%;
+    bottom: 40%;
+    -webkit-transition: opacity 0.35s ease-in, -webkit-transform 0.35s ease-in;
+    transition: opacity 0.35s ease-in, transform 0.35s ease-in;
+}
+.hvr-zoom:hover span {
+    opacity: 0.8;
+}
+.hvr-zoom img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: 100%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -moz-transition: all 1s ease;
+    /* Firefox */
+    -o-transition: all 1s ease;
+    /* IE 9 */
+    -ms-transition: all 1s ease;
+    /* Opera */
+    transition: all 1s ease;
+    max-width: 100%;
+}
+.hvr-zoom:hover img {
+    opacity: 0.8;
+    -webkit-transform: scale(1.25);
+    /* Safari and Chrome */
+    -moz-transform: scale(1.25);
+    /* Firefox */
+    -ms-transform: scale(1.25);
+    /* IE 9 */
+    -o-transform: scale(1.25);
+    /* Opera */
+    transform: scale(1.25);
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .wine-label-main {
+        height: 50vh;
+        background: url("images/tupun02.jpg") center center no-repeat;
+        width: 50%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .wine-label-main {
+        height: 50vh;
+        background: url("images/tupun02.jpg") center center no-repeat;
+        width: 25%;
+    }
+}
