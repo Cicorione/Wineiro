@@ -1,18 +1,13 @@
-/* Custom CSS for Wineiro project */
-.affix {
-      top: 0;
-      width: 100%;
-  }
-
-
-
 /* Remove the navbar's default margin-bottom and rounded borders */
 
 
 .navbar {
-    margin-bottom: 0;
+    margin: 0;
+    border: none;
     border-radius: 0;
+    color: #000;
     background-color:rgba(227, 219, 219, 0.5);
+    z-index: 100;
 }
 
 
@@ -23,12 +18,9 @@
     background-size: cover;
     color: #FFF;
     text-shadow: 2px 2px 4px #000;
+    position: relative;
+    margin: 0;
     height: 100vh;
-}
-.wine-label-main {
-    height: 50vh;
-    background: url("images/tupun02.jpg") center center no-repeat;
-    width: 100%;
 }
 
 /* aboutme */
@@ -65,7 +57,7 @@ button.aboutbtn {
 }
 .jumbo-center {
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 5%;
     right: 5%;
     text-align: center;
