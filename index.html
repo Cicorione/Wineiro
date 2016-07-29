@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Bootstrap Example</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="css/bootstrap.css">
+ <link rel="stylesheet" href="css/custom.css">
+ <script src="https://use.fontawesome.com/41585fee77.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <script>
+// Snippet from https://jsfiddle.net/HQS8s/ & https://stackoverflow.com/questions/1216114/how-can-i-make-a-div-stick-to-the-top-of-the-screen-once-its-been-scrolled-to
+
+ $(document).ready(function() {
+    // Cache selectors for faster performance.
+    var $window = $(window),
+        $mainMenuBar = $('#navigation'),
+        $mainMenuBarAnchor = $('#mainMenuBarAnchor');
+
+    // Run this on scroll events.
+    $window.scroll(function() {
+        var window_top = $window.scrollTop();
+        var div_top = $mainMenuBarAnchor.offset().top;
+        if (window_top > div_top) {
+            // Make the div sticky.
+            $mainMenuBar.addClass('navbar-fixed-top');
+            $mainMenuBarAnchor.height($mainMenuBar.height());
+        }
+        else {
+            // Unstick the div.
+            $mainMenuBar.removeClass('navbar-fixed-top');
+            $mainMenuBarAnchor.height(0);
+        }
+    });
+});
+ </script>
+ <script>
+// Smooth Scroll from http://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, .btn a, footer a[href='#myPage'], a").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <section id="showcase">
+    <div class="jumbotron">
+      <div class="container text-center">
+        <div class="jumbo-center">
+        <h1>CRAVEIRO USA</h1>
+        <p>Importers of premiung beverage.</p>
+        <a href="index03.html#aboutme" class="btn btn-info" role="button">start</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div id="mainMenuBarAnchor"></div>
+  <nav id="navigation" class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#showcase">WebSite Name</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#aboutme">Start</a></li>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#main-content">Brands</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="aboutme">
+    <div class="container-fluid padtop">
+      <div class="container">
+        <div class="row aboutme">
+          <div class="text-center">
+            <h1>Who We Are</h1>
+            <span class="fa fa-group aboutme"></span>
+              <h3>Our vision at CRAVEIRO is to be a top beverage industry player, known as a winning company that shapes our industry. In doing so, we will grow our revenue and profits, thereby enhancing the value of CRAVEIRO to our shareholders.</h3>
+              <button type="button" class="btn btn-lg bn-info aboutbtn" data-toggle="collapse" data-target="#misstate" style="margin: 25px 0px 25px 0px">Mission Statement</button>
+              <div id="misstate" class="collapse italic"><strong>CRAVEIRO is dedicated to building brands by providing innovative products, originality, constant quality, exceptional value and unsurpassed customer service, all with great distinction.</strong></div>
+          </div>
+        </div>
+      </div>
+      <div id="info" class="container aboutme padtop">
+        <div clas="row">
+          <div class="col-md-4">
+            <div class="text-center">
+              <span class="fa fa-industry aboutme"></span>
+            </div>
+              <p class="padtop padbot">CRAVEIRO was founded on three cornerstones: quality of product, quality of people, and quality of relationships.  It is therefore logical that our portfolio today continues to reflect the unerring principle of excellence.  This principle continues to guide every step of our growth, from the choice of new representations, to the range of services demanded by an increasingly sophisticated and competitive market, to the informed personnel who provide them.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <span class="fa fa-bar-chart aboutme"></span>
+            </div>
+              <p class="padtop padbot">Our business strategy is focused on growing our global brands in the North American market through great knowledge of the European and North and South - American markets, creating new growth opportunities by supporting the right innovations and investments, and building a global, fact-based, high-performing culture, thereby enhancing the value of the brands we represent.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <span class="fa fa-key aboutme"></span>
+            </div>
+              <p class="padtop padbot">We invite you to explore CRAVEIRO's Web site for you to get to know our line of fine spirits and fine wines appreciated world wide. CRAVEIRO is the United States Importer of Isabela, Argentina; Bela, Chile and the Colorado importer for Bodega del Tupun, Argentina; Vina Sutil, Chile; Vina Polkura, Chile; Sur de los Andes, Argentina and Tenuta Casteani, Italy. CRAVEIRO also provides marketing services for Itaipava Pilsen, Brazil in Colorado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main id="main-content">
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun01.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+    		</div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun02.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun03.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom" style="margin: 0px;">
+              <img src="images/tupun04.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun05.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+    		</div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun06.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom">
+              <img src="images/tupun07.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3" style="padding-left: 0px; padding-right: 0px;">
+          <div class="hvr-zoom" style="margin: 0px;">
+              <img src="images/tupun08.jpg" alt="Nome">
+              <span class="fa fa-link"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section id="awards">
+    <div class="container padtop padbot">
+      <div class="row text-center">
+        <div class="text-center">
+          <span class="fa fa-book aboutme"></span>
+        </div>
+        <h1>Awards</h1>
+        <h3>something and something</h3>
+        <br />
+      </div>
+      <div class="row">
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Syrah</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>James Suckling 95</dd>
+              <dd>Descorchados 94</dd>
+            <dt>2011</dt>
+              <dd>Wine Spectator 91 (Top 100)</dd>
+              <dd>James Suckling 93</dd>
+            <dt>2010</dt>
+              <dd>Descorchados 93</dd>
+              <dd>James Suckling 94</dd>
+              <dd>Wine Advocate 91</dd>
+              <dd>Jancis Robinson 16.5</dd>
+              <dd>Wine Spectator 92</dd>
+            <dt>2009</dt>
+              <dd>Wine Advocate 91+</dd>
+              <dd>Wine Enthusiast 91</dd>
+              <dd>Wine & Spirits 92</dd>
+            <dt>2008</dt>
+              <dd>Wine Spectator 91 (Top 100)</dd>
+              <dd>Wine Advocate 91</dd>
+              <dd>Decanter 17</dd>
+            <dt>2007</dt>
+              <dd>Wine & Spirits 92</dd>
+              <dd>Wine Advocate 91</dd>
+            <dt>2006</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine Advocate 90</dd>
+              <dd>Wine & Spirits 91</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Syrah Block g+i</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 95</dd>
+              <dd>James Suckling 93</dd>
+              <dt>2011</dt>
+              <dd>Wine Spectator 92</dd>
+            <dt>2010</dt>
+              <dd>Descorchados 93</dd>
+              <dt>2009</dt>
+              <dd>Wine Advocate 91+</dd>
+            <dt>2008</dt>
+              <dd>Wine Advocate 91</dd>
+              <dd>Wine Advocate 92</dd>
+              <dd>Wine Enthusiast 91</dd>
+            <dt>2007</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine Advocate 93</dd>
+          </dl>
+
+          <h4>Polkura Syrah Secano</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 95</dd>
+              <dd>James Suckling 94</dd>
+          </dl>
+
+          <h4>Polkura Syrah Lote D</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 92</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Malbec</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 95</dd>
+            <dt>2010</dt>
+              <dd>James Suckling 93</dd>
+              <dd>Descorchados 91</dd>
+            <dt>2009</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine & Spirits 92</dd>
+            <dt>2008</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine & Spirits 92</dd>
+          </dl>
+
+          <h4>Polkura GSM+T</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 91</dd>
+              <dd>Wine Spectator 90</dd>
+              <dd>James Suckling 93</dd>
+          </dl>
+
+          <h4>Polkura Aylin Sauvignon Blanc</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 92</dd>
+              <dd>James Suckling 90</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Isabela Malbec</h4>
+          <dl>
+            <dt>2010</dt>
+              <dd>Wine Spectator 88</dd>
+              <dd>Highest rated Malbec from Argentina in its price point.</dd>
+          </dl>
+
+          <h4>Bela Cabernet Sauvignon</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Spectator 90</dd>
+          </dl>
+
+          <h4>Tupun Malbec Reserva</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Wine Advocate 90</dd>
+          </dl>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Advocate 90</dd>
+          </dl>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Spectator 88</dd>
+          </dl>
+          <dl>
+            <dt>2005</dt>
+              <dd>Red White and Rose 95</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- study of floating -->
+
+      <div class="row">
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Syrah</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>James Suckling 95</dd>
+              <dd>Descorchados 94</dd>
+            <dt>2011</dt>
+              <dd>Wine Spectator 91 (Top 100)</dd>
+              <dd>James Suckling 93</dd>
+            <dt>2010</dt>
+              <dd>Descorchados 93</dd>
+              <dd>James Suckling 94</dd>
+              <dd>Wine Advocate 91</dd>
+              <dd>Jancis Robinson 16.5</dd>
+              <dd>Wine Spectator 92</dd>
+            <dt>2009</dt>
+              <dd>Wine Advocate 91+</dd>
+              <dd>Wine Enthusiast 91</dd>
+              <dd>Wine & Spirits 92</dd>
+            <dt>2008</dt>
+              <dd>Wine Spectator 91 (Top 100)</dd>
+              <dd>Wine Advocate 91</dd>
+              <dd>Decanter 17</dd>
+            <dt>2007</dt>
+              <dd>Wine & Spirits 92</dd>
+              <dd>Wine Advocate 91</dd>
+            <dt>2006</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine Advocate 90</dd>
+              <dd>Wine & Spirits 91</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Syrah Block g+i</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 95</dd>
+              <dd>James Suckling 93</dd>
+              <dt>2011</dt>
+              <dd>Wine Spectator 92</dd>
+            <dt>2010</dt>
+              <dd>Descorchados 93</dd>
+              <dt>2009</dt>
+              <dd>Wine Advocate 91+</dd>
+            <dt>2008</dt>
+              <dd>Wine Advocate 91</dd>
+              <dd>Wine Advocate 92</dd>
+              <dd>Wine Enthusiast 91</dd>
+            <dt>2007</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine Advocate 93</dd>
+          </dl>
+
+          <h4>Polkura Syrah Secano</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 95</dd>
+              <dd>James Suckling 94</dd>
+          </dl>
+
+          <h4>Polkura Syrah Lote D</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 92</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter">
+
+          <h4>Polkura Malbec</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 95</dd>
+            <dt>2010</dt>
+              <dd>James Suckling 93</dd>
+              <dd>Descorchados 91</dd>
+            <dt>2009</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine & Spirits 92</dd>
+            <dt>2008</dt>
+              <dd>Wine Spectator 90</dd>
+              <dd>Wine & Spirits 92</dd>
+          </dl>
+
+          <h4>Polkura GSM+T</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Descorchados 91</dd>
+              <dd>Wine Spectator 90</dd>
+              <dd>James Suckling 93</dd>
+          </dl>
+
+          <h4>Polkura Aylin Sauvignon Blanc</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Descorchados 92</dd>
+              <dd>James Suckling 90</dd>
+          </dl>
+        </div>
+
+        <div class="col-sm-4 col-md-3 tocenter clearfix">
+
+          <h4>Isabela Malbec</h4>
+          <dl>
+            <dt>2010</dt>
+              <dd>Wine Spectator 88</dd>
+              <dd>Highest rated Malbec from Argentina in its price point.</dd>
+          </dl>
+
+          <h4>Bela Cabernet Sauvignon</h4>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Spectator 90</dd>
+          </dl>
+
+          <h4>Tupun Malbec Reserva</h4>
+          <dl>
+            <dt>2013</dt>
+              <dd>Wine Advocate 90</dd>
+          </dl>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Advocate 90</dd>
+          </dl>
+          <dl>
+            <dt>2012</dt>
+              <dd>Wine Spectator 88</dd>
+          </dl>
+          <dl>
+            <dt>2005</dt>
+              <dd>Red White and Rose 95</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- end -->
+
+    </div>
+  </section>
+
+</body>
+</html>
